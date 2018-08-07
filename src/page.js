@@ -79,9 +79,9 @@ const removeTranslateMark = (parm) => {
   
   $notranslate.removeAttr('onmouseover').removeAttr("onmouseout").removeClass("notranslate")
   $notranslate.children('span.google-src-text').remove()
-  $.html( $.html().replace(/(<span class=\"\">|<\/span>)/g, '') )
+  $resultHtml.html() = $.html().replace(/(<span class=\"\">|<\/span>)/g, '')
   
-  return $.html()
+  return $result.html();
 }
 
 module.exports = getPage
