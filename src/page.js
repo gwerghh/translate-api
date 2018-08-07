@@ -76,8 +76,10 @@ const removeTranslateMark = (parm) => {
     href = href && queryString.parse(url.parse(href).query).u
     $item.attr("href",href)
   })
-  $notranslate.children('span.google-src-text').remove()
+  
   $notranslate.removeAttr('onmouseover').removeAttr("onmouseout").removeClass("notranslate")
+  
+  $notranslate.value() = $notranslate.value().replace(/(<span class=\"google-src-text\">|<\/span>)/g, '');
   
   return $.html()
 }
