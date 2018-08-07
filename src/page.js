@@ -79,7 +79,7 @@ const removeTranslateMark = (parm) => {
   
   $notranslate.removeAttr('onmouseover').removeAttr("onmouseout").removeClass("notranslate")
   
-  $notranslate.val( $notranslate.val().replace(/(<span class=\"google-src-text\">|<\/span>)/g, '') )
+  $notranslate.val( $notranslate.html().replace(/(<span class=\"google-src-text\">|<\/span>)/g, '') )
   
   return $.html()
 }
