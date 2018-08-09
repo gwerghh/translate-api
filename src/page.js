@@ -9,12 +9,11 @@ const translateGoogle = require('./config').translateGoogle
 
 const userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
 
-// 翻译网页
-const getPage = (targetUrl)=>{
+const getPage = (targetUrl, targetLang)=>{
   console.log(targetUrl,"---------- translate begin ----------")
   let parameter ={
     sl: 'en',
-    tl: 'zh-CN',
+    tl: targetLang,
     js: 'y',
     prev: '_t',
     hl: 'zh-CN',
